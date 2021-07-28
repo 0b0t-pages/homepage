@@ -103,11 +103,8 @@ html {
     width: 968px;
 }
 
-.con1 {
-    text-align: center;
-}
-
 .con1, .con3 {
+    text-align: center;
     font-size: 8pt;
     width: 150px;
     margin: 0 6px;
@@ -149,7 +146,7 @@ html {
 }
 
 .spacerDonations {
-    height: 345px;
+    height: 360px;
 }
 
 .spacer0 {
@@ -165,7 +162,7 @@ html {
 }
 
 .spacer11 {
-    height: 650px;
+    height: 620px;
 }
 
 .selected {
