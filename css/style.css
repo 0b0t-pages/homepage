@@ -81,7 +81,7 @@ html {
 }
 
 .containerChat::-webkit-scrollbar-thumb {
-    background-color: var(--thumbBG) ;
+    background-color: var(--thumbBG);
     border-radius: 6px;
     border: 0 solid var(--scrollbarBG);
 }
@@ -114,11 +114,6 @@ html {
 .con2 {
     width: 600px;
     height: 700px;
-}
-
-#server {
-    font-size: 12pt;
-    font-family: 'Minecraft', sans-serif;
 }
 
 .post-header {
@@ -202,4 +197,73 @@ a:hover {
     bottom: 20px;
     right: 6px;
     left: 6px;
+}
+
+#server {
+    font-size: 10pt;
+    font-family: 'Minecraftia', sans-serif;
+}
+
+.playersScrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.playersScrollbar {
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    padding: 0;
+}
+
+.playersScrollbar::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+
+.playersScrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border: 0 solid var(--scrollbarBG);
+}
+
+#players {
+    position: inherit;
+    right: -6px;
+    left: -6px;
+    padding-left: 6px;
+    margin: 6px 0;
+    height: 504px;
+    text-align: left;
+    overflow-x: hidden;
+}
+
+.player a {
+    position: relative;
+    top: -4px;
+    height: 16px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-weight: normal;
+    text-shadow: #000000A0 2px 2px;
+    color: #FFF;
+}
+
+.player a:hover {
+    color: #FFFF55;
+}
+
+.player img {
+    position: relative;
+    top: -1px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+.player {
+    height: 16px;
+    background-color: #50505080;
+    padding: 0;
+    margin: 2px 0;
+    font-size: 10pt;
+    font-family: 'Minecraftia', sans-serif;
+    white-space: nowrap;
 }
