@@ -3,6 +3,14 @@ const divServer = document.getElementById("server");
 const divPlayers = document.getElementById("players");
 
 $(document).ready(function () {
+    updatePlayerList();
+});
+
+function updatePlayerList() {
+    divServer.innerHTML = "";
+    divPlayers.innerHTML = "";
+    divPlayers.classList.remove("playersScrollbar");
+
     $.getJSON(api, function (json) {
         if (json.online === false) {
             divServer.innerHTML = "<div style='color: #A9A9A9'>Server is offline</div>";
@@ -18,4 +26,6 @@ $(document).ready(function () {
             }
         }
     });
-});
+
+    window.setTimeout(updatePlayerList, 60000);
+}
