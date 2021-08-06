@@ -11,13 +11,10 @@
 
     <link href="images/favicon.png" rel="icon" type="image/png">
 
+    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" type="text/css">
-
-    <script charset="utf-8" src="js/jquery-1.4.2.js" type="text/javascript"></script>
-    <script charset="utf-8" src="js/jquery.scrollTo.js" type="text/javascript"></script>
-    <script charset="utf-8" src="js/slide.js" type="text/javascript"></script>
 </head>
-<body onload="updateStatus()">
+<body>
 
 <!-- Holder, this container is used to position everything in the centre of the users screen -->
 <div class="holder">
@@ -32,27 +29,27 @@
 
     <!-- Start of navigation -->
     <div class="navigation">
-        <a class="panel" href="#main">SERVER</a> <span class="raquo">»</span>
-        <a class="panel" href="#area2">DONATIONS</a> <span class="raquo">»</span>
-        <a class="panel selected" href="#area3">COMMUNITY</a>
+        <a class="panel selected " href="#info">INFO</a> <span class="raquo">»</span>
+        <a class="panel" href="#donations">DONATIONS</a> <span class="raquo">»</span>
+        <a class="panel" href="#stats">STATS</a> <span class="raquo">»</span>
+        <a class="panel" href="#community">COMMUNITY</a>
     </div>
     <!-- End of navigation -->
 
     <!-- Container 1, static donation -->
     <div class="container con1">
-        0b0t runs on payments from its paypal account, which requires at least $85 to pay for itself at the end of each
-        month. If the server remains unpaid for a week after the end of a month, it is automatically shut down.<br><br>
-        Currently, the four owners pay most of the server costs.<br><br>
-        No bullshit included in the required donations. Exact prices and information written out in the 'Donate' tab. It
-        is possible to be 'rewarded' for donations and none of the owners benefits.<br><br>
+        <div class="top">
+            <p>The 0b0t Minecraft server runs on payments from its Paypal account. The account must be funded at the end
+                of each month to finance the server. Please help us keep the server running with your donation.
+                Currently, the four owners are paying about two-thirds of the server costs.</p>
+            <p>No bullshit is included in the donations requested. Exact prices and information written in the
+                "Donations" tab. It is possible to be 'rewarded' for donations in the game. The owner does not benefit
+                financially from the donations.</p>
+        </div>
 
-        <div class="spacerDonations"></div>
-
-        July: $0 / $85<br>
-
-        <div class="spacer0"></div>
-
-        <a href="https://donate.0b0t.org"><img src="images/donate.gif" alt="Donate"></a>
+        <div class="bottom">
+            <a href="https://donate.0b0t.org"><img src="images/donate.gif" alt="Donate"></a>
+        </div>
     </div>
     <!-- Container 1 end -->
 
@@ -60,9 +57,9 @@
     <div class="containerChat con2">
         <div id="wrapper">
             <div id="mask">
-                <!-- Main holder, this is what you see on page load -->
-                <div class="item" id="main">
-                    <a name="main"></a>
+                <!-- Info Tab start -->
+                <div class="item" id="info">
+                    <a name="info"></a>
                     <div class="post-header">0builders0tools (0b0t.org)</div>
                     <div class="post-content">
                         0builders0tools is a Minecraft anarchy server that promises its players vanilla survival
@@ -94,18 +91,18 @@
                     </div>
 
                     <div class="spacer7"></div>
-                    Website last updated 22th july 2021.
+                    Website last updated 06th August 2021.
                 </div>
-                <!-- Main end -->
+                <!-- Info Tab end -->
 
-                <!-- This is additional content, you'll see this when you click the corresponding name in nav -->
-                <div class="item" id="area2">
-                    <a name="area2"></a>
+                <!-- Donations Tab start -->
+                <div class="item" id="donations">
+                    <a name="donations"></a>
 
                     <div class="post-header">Donation rewards</div>
                     <div class="post-content">
                         We are currently working on a donation API. In the future, you will get 30 days of custom name
-                        colors (including bold and italic) when you donate $5 or more.
+                        colors (including bold and italic) and other things when you donate a certain amount of money.
                     </div>
 
                     <div class="spacer7"></div>
@@ -113,8 +110,8 @@
                     <div class="post-header">Server costs</div>
                     <div class="post-content">
                         The Minecraft server computer costs $82 per month. The hardware is an Intel® Core™ i9-9900K cpu,
-                        128 gb ecc ram and 2 x 8tb harddrives in raid 0. The extra dollar goes towards the annual domain cost.
-                        That's $85.
+                        128 gb ecc ram and 2 x 8tb harddrives in raid 0. The extra dollars go towards the annual domain
+                        cost. That's $85.
                     </div>
 
                     <div class="spacer7"></div>
@@ -130,9 +127,22 @@
                         Go to <a href="https://donate.0b0t.org">donate.0b0t.org</a> to make a donation today!
                     </div>
                 </div>
+                <!-- Donations Tab end -->
 
-                <div class="item" id="area3">
-                    <a name="area3"></a>
+                <!-- Stats Tab start -->
+                <div class="item" id="stats">
+                    <a name="stats"></a>
+
+                    <div class="post-header">Player history</div>
+                    <div class="post-content">
+                        <div id="plot"></div>
+                    </div>
+                </div>
+                <!-- Stats Tab end -->
+
+                <!-- Community Tab start -->
+                <div class="item" id="community">
+                    <a name="community"></a>
 
                     <div class="post-header">Discord Server</div>
                     <div class="post-content">
@@ -185,12 +195,12 @@
                         <a href="https://minecraft-server.eu/vote/index/206F8" target="_blank">[8]</a> /
                         <a href="https://minecraftlist.org/vote/11787" target="_blank">[9]</a> /
                         <a href="https://namemc.com/server/0b0t.org" target="_blank">[10]</a>
-                        <br>
-                        Some of these don't work, and that's because they're shit.
+
+                        <p>Some of these don't work, and that's because they're shoot.</p>
                     </div>
 
                 </div>
-                <!-- End of additional content -->
+                <!-- Community Tab end -->
 
                 <!-- Lets clear our styled floats so the holder scales correctly -->
                 <div class="clear"></div>
@@ -200,19 +210,23 @@
     </div>
     <!-- Container 2 end -->
 
-    <!-- Container 3, twitter widget -->
+    <!-- Container 3, widgets -->
     <div class="container con3">
-        <a href="https://discord.gg/7tW8ZAtGr5">
-            <img src="https://img.shields.io/discord/843551077759844362?logo=discord" alt="discord">
-        </a>
-        <div class="spacer0"></div>
-        <a href="https://old.reddit.com/r/0b0t/">
-            <img src="https://img.shields.io/reddit/subreddit-subscribers/0b0t" alt="reddit">
-        </a>
-        <div class="spacer11"></div>
-        Background by Ethereas
-        <div class="spacer0"></div>
-        Site designed by <a href="https://reager.org/">Reager.org</a>
+        <div class="top">
+            <p><a href="https://discord.gg/7tW8ZAtGr5">
+                <img src="https://img.shields.io/discord/843551077759844362?logo=discord" alt="discord">
+            </a></p>
+            <p><a href="https://old.reddit.com/r/0b0t/">
+                <img src="https://img.shields.io/reddit/subreddit-subscribers/0b0t" alt="reddit">
+            </a></p>
+            <div class="spacer0"></div>
+            <div id="server"></div>
+        </div>
+
+        <div class="bottom">
+            <p>Background by Ethereas</p>
+            <p>Site designed by <a href="https://reager.org/">Reager.org</a></p>
+        </div>
     </div>
     <!-- Container 3 end -->
 
@@ -222,6 +236,15 @@
 
 </div>
 <!-- Holder end -->
+
+<script charset="utf-8" src="js/jquery-1.4.2.js" type="text/javascript"></script>
+<script charset="utf-8" src="js/jquery.scrollTo.js" type="text/javascript"></script>
+<script charset="utf-8" src="js/slide.js" type="text/javascript"></script>
+
+<script src="https://cdn.plot.ly/plotly-2.3.0.min.js" type="text/javascript"></script>
+
+<script src="js/plotly.0b0t.js" type="text/javascript"></script>
+<script src="js/mcsrvstat.0b0t.js" type="text/javascript"></script>
 
 </body>
 </html>

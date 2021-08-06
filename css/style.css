@@ -1,8 +1,7 @@
 body {
-    background: url('../images/background.png') center fixed;
     font-family: Helvetica, sans-serif;
-    /*font-size: 13px;*/
     color: #EBE2CA;
+    background: #000000 url('../images/background.png') fixed center;
     margin: 0;
     padding: 0;
     -webkit-background-size: cover;
@@ -104,6 +103,7 @@ html {
 }
 
 .con1, .con3 {
+    position: relative;
     text-align: center;
     font-size: 8pt;
     width: 150px;
@@ -116,8 +116,12 @@ html {
     height: 700px;
 }
 
+#server {
+    font-size: 12pt;
+    font-family: 'Minecraft', sans-serif;
+}
+
 .post-header {
-    /*font-size: 10pt;*/
     font-weight: 800;
 }
 
@@ -145,10 +149,6 @@ html {
     clear: both;
 }
 
-.spacerDonations {
-    height: 360px;
-}
-
 .spacer0 {
     height: 5px;
 }
@@ -161,12 +161,7 @@ html {
     height: 20px;
 }
 
-.spacer11 {
-    height: 620px;
-}
-
 .selected {
-    /*font-size: 9pt;*/
     text-decoration: underline;
 }
 
@@ -194,3 +189,17 @@ a:hover {
     color: #EBE2CA;
 }
 
+.top {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    left: 6px;
+    text-align: center;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 20px;
+    right: 6px;
+    left: 6px;
+}
