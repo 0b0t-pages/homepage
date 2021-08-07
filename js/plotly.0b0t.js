@@ -1,8 +1,13 @@
 const url = "https://stats.minecraftservers.org/data/540862";
 
 $(document).ready(function () {
+    updatePlayerGraph();
+});
+	
+function updatePlayerGraph() {
+	Plotly.purge("plot");
+	
     $.getJSON(url, function (json) {
-
         let onlineThisWeek = {
             x: json.online[1].data.map(e => new Date(e[0])),
             y: json.online[1].data.map(e => e[1]),
@@ -57,4 +62,6 @@ $(document).ready(function () {
 
         Plotly.newPlot("plot", data, layout);
     });
-});
+
+    window.setTimeout(updatePlayerGraph, 10 * 60 * 1000);
+}

@@ -27,5 +27,5 @@ function updatePlayerList() {
         }
     });
 
-    window.setTimeout(updatePlayerList, 60000);
+    window.setTimeout(updatePlayerList, 30 * 1000);
 }
