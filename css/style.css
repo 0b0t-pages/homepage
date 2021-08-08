@@ -26,11 +26,17 @@ body {
 }
 
 .logo {
+	text-align: center;
     font-size: 102px;
     font-weight: bold;
     color: #f2f2f2;
     text-shadow: 2px 2px 10px #000000;
     margin-bottom: -15px;
+}
+
+.logo a:hover {
+    text-shadow: 3px 3px 3px #c16b50;
+    color: #EBE2CA;
 }
 
 .container {
@@ -117,7 +123,10 @@ html {
 }
 
 .post-header {
+	margin: 0;
+	font-size: 16px;
     font-weight: 800;
+	display: block;
 }
 
 .post-content {
@@ -176,11 +185,6 @@ a {
 
 a:hover {
     text-shadow: 1px 1px 1px #c16b50;
-    color: #EBE2CA;
-}
-
-.logo a:hover {
-    text-shadow: 3px 3px 3px #c16b50;
     color: #EBE2CA;
 }
 
@@ -266,4 +270,8 @@ a:hover {
     font-size: 10pt;
     font-family: 'Minecraftia', sans-serif;
     white-space: nowrap;
+}
+
+.centered {
+	text-align: center;
 }
