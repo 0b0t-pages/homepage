@@ -41,8 +41,7 @@ function updatePlayerGraph() {
                 tickformat: '%A'
             },
             yaxis: {
-                title: 'players',
-                range: [0, 200]
+                title: 'players'
             },
             legend: {
                 orientation: "h",
