@@ -1,12 +1,12 @@
-const url = "https://stats.minecraftservers.org/data/540862";
+const url = 'https://api.allorigins.win/raw?url=' + encodeURIComponent("https://stats.minecraftservers.org/data/540862");
 
 $(document).ready(function () {
     updatePlayerGraph();
 });
-	
+
 function updatePlayerGraph() {
-	Plotly.purge("plot");
-	
+    Plotly.purge("plot");
+
     $.getJSON(url, function (json) {
         let onlineThisWeek = {
             x: json.online[1].data.map(e => new Date(e[0])),
