@@ -18,14 +18,28 @@ function updatePlayerList() {
             divServer.innerHTML = "<div style='color: #33FF00'>" + json.players.online + " Players online</div>";
 
             if (json.players.uuid !== null) {
+                let index = 0;
+                let middle = Math.round(json.players.online / 2);
+                let content = "";
                 jQuery.each(json.players.uuid, function (name, uuid) {
-                    divPlayers.innerHTML += "<div class='player'><img src='https://mc-heads.net/avatar/" + uuid + "/16' alt='playerhead'><a href='https://namemc.com/" + name + "' target='_blank'>" + name + "</a></div>"
-                });
+                    console.log(index);
+                    console.log(middle);
+                    if(index == 0) {
+                        content += '<div class="xxs12 xs12 sm6">';
+                    }
+                    content += "<div class='player'><img src='https://mc-heads.net/avatar/" + uuid + "/16' alt='playerhead'><a href='https://namemc.com/" + name + "' target='_blank'>" + name + "</a></div>"
 
-                divPlayers.classList.add("playersScrollbar");
+                    if(index == middle) {
+                        content += '</div><div class="xxs12 xs12 sm6">';
+                    }
+                    index++;
+                });
+                content += '</div>';
+
+                divPlayers.innerHTML = content;
             }
         }
     });
 
-    window.setTimeout(updatePlayerList, 30 * 1000);
+    window.setTimeout(updatePlayerList, 500 * 1000);
 }

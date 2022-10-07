@@ -1,0 +1,65 @@
+.btn {
+  background-color: color(button);
+  border: 0;
+  border-radius: default(radius, button);
+  color: color(button, text);
+  font-weight: bold;
+  padding: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: color(button, hover);
+  }
+
+  &.large {
+    padding: 16px;
+  }
+}
+
+.scale {
+  transition: all 0.2s ease-in-out;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.copy-btn {
+  position: relative;
+
+  &::before {
+    background-color: color(button, hover);
+    border-radius: 4px;
+    color: color(text, grey);
+    content: "Click to copy!";
+    display: block;
+    font-size: 12px;
+    height: 28px;
+    left: 50%;
+    opacity: 0%;
+    padding: 4px 8px;
+    pointer-events: none;
+    position: absolute;
+    top: -32px;
+    transform: translateX(-50%);
+    transition: all 0.2s ease-in-out;
+    white-space: nowrap;
+    z-index: 2;
+  }
+
+  &.hover {
+    &::before {
+      opacity: 100%;
+      transition: none;
+    }
+  }
+
+  &.copied {
+    &::before {
+      content: "Copied!";
+    }
+  }
+}
