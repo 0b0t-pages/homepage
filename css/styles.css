@@ -2205,6 +2205,15 @@ strong {
   font-weight: 600;
 }
 
+a.text_link {
+  color: #fff;
+  text-decoration: none;
+}
+a.text_link:hover, a.text_link:focus {
+  color: #2bff2b;
+  text-decoration: underline;
+}
+
 .wysiwyg .line-title {
   font-size: 16px;
   margin-bottom: 1.6rem;
@@ -2359,6 +2368,13 @@ body {
   .modal .block {
     min-width: 50%;
   }
+}
+
+#namemc-server .players {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 32px;
 }
 
 .logo {

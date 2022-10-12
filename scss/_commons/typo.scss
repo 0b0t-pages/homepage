@@ -23,6 +23,17 @@ strong {
   font-weight: default(weight, bold);
 }
 
+a.text_link {
+  color: color(text);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: color(secondary);
+    text-decoration: underline;
+  }
+}
+
 .wysiwyg {
   .line-title {
     font-size: 16px;
