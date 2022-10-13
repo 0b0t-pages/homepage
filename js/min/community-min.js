@@ -1,0 +1,1 @@
+$(function(){$.getJSON("https://api.namemc.com/server/0b0t.org/likes",function(a){for(let e=0;e<a.length;e++)$("#namemc-server .players").append('<a href="https://namemc.com/'+a[e]+'" target="_blank"><img data-uuid="'+a[e]+'" src="https://crafatar.com/avatars/'+a[e]+'?size=32&overlay"></a>')})});

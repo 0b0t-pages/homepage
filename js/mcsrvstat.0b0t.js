@@ -22,8 +22,6 @@ function updatePlayerList() {
                 let middle = Math.round(json.players.online / 2);
                 let content = "";
                 jQuery.each(json.players.uuid, function (name, uuid) {
-                    console.log(index);
-                    console.log(middle);
                     if(index == 0) {
                         content += '<div class="xxs12 xs12 sm6">';
                     }

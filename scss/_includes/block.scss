@@ -78,9 +78,6 @@
   }
 
   &-promotion {
-    background-image: url("../img/promotion.png");
-    background-position: center;
-    background-size: cover;
-    height: calc(100% - 20px);
+    min-height: 350px;
   }
 }

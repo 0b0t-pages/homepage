@@ -1,0 +1,97 @@
+@mixin size($size) {
+  height: $size;
+  width: $size;
+}
+@mixin abs-pos {
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+$color1: rgba(34, 34, 34, 90%);
+$color2: rgba(59, 59, 59, 30%);
+
+.thunder {
+  @include size(100%);
+  background-color: #222;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  display: none;
+  left: 0;
+  opacity: 50%;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 99999;
+
+  &::after {
+    animation: thunder-bg 6s infinite;
+    background-color: rgba(0, 0, 0, 10%);
+    content: "";
+    z-index: 1;
+
+    @include size(100%);
+    @include abs-pos;
+  }
+
+  canvas {
+    @include size(100%);
+    @include abs-pos;
+  }
+
+  #canvas3 {
+    z-index: 5;
+  }
+
+  #canvas2 {
+    z-index: 10;
+  }
+
+  #canvas1 {
+    z-index: 100;
+  }
+
+  @at-root {
+    @keyframes thunder-bg {
+      0% {
+        background-color: $color1;
+      }
+
+      9% {
+        background-color: $color1;
+      }
+
+      10% {
+        background-color: $color2;
+      }
+
+      10.5% {
+        background-color: $color1;
+      }
+
+      80% {
+        background-color: $color1;
+      }
+
+      82% {
+        background-color: $color2;
+      }
+
+      83% {
+        background-color: $color1;
+      }
+
+      83.5% {
+        background-color: $color2;
+      }
+
+      100% {
+        background-color: $color1;
+      }
+    }
+  }
+}

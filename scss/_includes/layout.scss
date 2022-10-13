@@ -145,9 +145,11 @@ body {
 
   .block {
     height: auto;
+    max-width: 80%;
     min-width: 80%;
 
     @media (min-width: $md-width) {
+      max-width: 50%;
       min-width: 50%;
     }
   }
@@ -159,5 +161,29 @@ body {
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 32px;
+  }
+}
+
+#skins {
+  bottom: 0;
+  display: flex;
+  left: 0;
+  opacity: 0%;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  > div {
+    flex-basis: 50%;
+    min-width: 50%;
+    width: 50%;
+  }
+
+  &.open {
+    opacity: 100%;
+    pointer-events: all;
   }
 }

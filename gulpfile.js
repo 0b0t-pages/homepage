@@ -10,11 +10,17 @@ const rename = require("gulp-rename");
 const sassGlob = require("gulp-sass-glob");
 const autoprefixer = require("gulp-autoprefixer");
 
+const cleanCSS = require('gulp-clean-css');
+const sourcemaps = require('gulp-sourcemaps');
+
+const minify = require('gulp-minify');
+
 const config = {
   paths: {
     input: {
       scss: ["scss/styles.scss"],
-      scsswatch: ['scss/*.scss', 'scss/*/*.scss', 'slick/*.scss']
+      scsswatch: ['scss/*.scss', 'scss/*/*.scss', 'slick/*.scss'],
+      jswatch: ['js/*.js']
     },
     output: {
       css: "css/"
@@ -23,6 +29,7 @@ const config = {
   filename: {
     output: {
       css: "styles.css",
+      min: "styles.min.css",
     },
   },
   sassOptions: {
@@ -46,12 +53,28 @@ function doCss() {
     // .pipe(browserSync.stream());
 }
 
+function minifycss() {
+  return src('css/styles.css')
+    .pipe(sourcemaps.init())
+    .pipe(cleanCSS())
+    .pipe(sourcemaps.write())
+    .pipe(rename(config.filename.output.min))
+    .pipe(dest('css'));
+};
+
+function minifyjs() {
+  return src(['js/*.js'])
+    .pipe(minify({noSource: true}))
+    .pipe(dest('js/min'))
+};
+
 /* Init des différents Watcher */
 function serve() {
   // browserSync.init();
-  watch(config.paths.input.scsswatch, series(doCss));
+  watch(config.paths.input.scsswatch, series(doCss, minifycss));
+  watch(config.paths.input.jswatch, series(minifyjs));
 }
 
 module.exports = {
-  default: series(doCss, serve),
+  default: series(doCss, minifycss, minifyjs, serve),
 };
