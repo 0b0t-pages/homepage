@@ -2197,6 +2197,25 @@ h1 {
   text-transform: uppercase;
 }
 
+.h3 {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+.h3 .icon {
+  fill: #fff;
+  margin-right: 10px;
+  max-height: 24px;
+  width: 24px;
+}
+.h3 .icon path:first-child {
+  fill: #fff;
+}
+.h3.icon-title {
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
 p {
   margin-bottom: 10px;
 }
@@ -2959,7 +2978,7 @@ body {
 }
 
 .tm-container-gallery {
-  height: 420px;
+  height: 520px;
   max-width: 100%;
   overflow: hidden;
 }
@@ -3101,13 +3120,13 @@ div.effect-honey {
   background: #4a3753;
   background-position: center;
   background-size: auto;
-  height: 400px;
+  height: 500px;
   max-width: 100%;
 }
 
 div.effect-honey .overlay {
   background-color: #0f0;
-  height: 400px;
+  height: 500px;
   opacity: 0%;
   transition: opacity 0.35s;
 }

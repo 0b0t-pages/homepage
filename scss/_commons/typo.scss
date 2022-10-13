@@ -15,6 +15,30 @@ h1 {
   text-transform: uppercase;
 }
 
+.h3 {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+
+  .icon {
+    fill: color(text);
+    margin-right: 10px;
+    max-height: 24px;
+    width: 24px;
+
+    path {
+      &:first-child {
+        fill: color(text);
+      }
+    }
+  }
+
+  &.icon-title {
+    margin-bottom: 8px;
+    margin-top: 20px;
+  }
+}
+
 p {
   margin-bottom: 10px;
 }
