@@ -5,12 +5,12 @@
    "description":"0b0t is a survival anarchy minecraft server based around the idea that players can do basically anything.",
    "icons":[
       {
-         "src":"/images/android-chrome-192x192.png",
+         "src":"/img/android-chrome-192x192.png",
          "sizes":"192x192",
          "type":"image/png"
       },
       {
-         "src":"/images/android-chrome-512x512.png",
+         "src":"/img/android-chrome-512x512.png",
          "sizes":"512x512",
          "type":"image/png"
       }
