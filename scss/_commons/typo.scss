@@ -49,7 +49,7 @@ strong {
 
 a.text_link {
   color: color(text);
-  text-decoration: none;
+  text-decoration: underline;
 
   &:hover,
   &:focus {

@@ -4,6 +4,10 @@
   overflow: hidden;
 }
 
+.tm-container-gallery-large {
+  height: 760px;
+}
+
 .slick-slider {
   &.slick-dotted {
     margin-bottom: 0;
@@ -77,7 +81,7 @@
 
 /* Common style */
 .grid .effect-honey {
-  background: #3085a3;
+  background: #1f242d;
   background-position: center;
   background-size: cover;
   cursor: pointer;
@@ -160,11 +164,19 @@ div.effect-honey {
   max-width: 100%;
 }
 
+.tm-container-gallery-large div.effect-honey {
+  height: 740px;
+}
+
 div.effect-honey .overlay {
   background-color: #0f0;
   height: 500px;
   opacity: 0%;
   transition: opacity 0.35s;
+}
+
+.tm-container-gallery-large div.effect-honey .overlay {
+  height: 740px;
 }
 
 div.effect-honey:hover .overlay {

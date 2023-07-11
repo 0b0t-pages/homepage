@@ -39,6 +39,18 @@
     }
   }
 
+  &-bg-spawn {
+    /* stylelint-disable-next-line prettier/prettier */
+    background-image:
+      linear-gradient(
+        to right,
+        rgba(0, 0, 0, 60%),
+        rgba(0, 0, 0, 10%)
+      ),
+      url("../img/kleingebaeck/spawn-render-kleingebaeck-3.jpg");
+    background-position: center;
+  }
+
   &-discord {
     background-color: color(background, discord);
     display: block;

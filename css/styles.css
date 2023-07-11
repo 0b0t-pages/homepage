@@ -2226,7 +2226,7 @@ strong {
 
 a.text_link {
   color: #fff;
-  text-decoration: none;
+  text-decoration: underline;
 }
 a.text_link:hover, a.text_link:focus {
   color: #2bff2b;
@@ -2656,6 +2656,11 @@ body {
 .block-bg .btn {
   align-self: center;
 }
+.block-bg-spawn {
+  /* stylelint-disable-next-line prettier/prettier */
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)), url("../img/kleingebaeck/spawn-render-kleingebaeck-3.jpg");
+  background-position: center;
+}
 .block-discord {
   background-color: #4636ff;
   display: block;
@@ -2983,6 +2988,10 @@ body {
   overflow: hidden;
 }
 
+.tm-container-gallery-large {
+  height: 760px;
+}
+
 .slick-slider.slick-dotted {
   margin-bottom: 0;
 }
@@ -3045,7 +3054,7 @@ body {
 /* Hover Effect */
 /* Common style */
 .grid .effect-honey {
-  background: #3085a3;
+  background: #1f242d;
   background-position: center;
   background-size: cover;
   cursor: pointer;
@@ -3124,11 +3133,19 @@ div.effect-honey {
   max-width: 100%;
 }
 
+.tm-container-gallery-large div.effect-honey {
+  height: 740px;
+}
+
 div.effect-honey .overlay {
   background-color: #0f0;
   height: 500px;
   opacity: 0%;
   transition: opacity 0.35s;
+}
+
+.tm-container-gallery-large div.effect-honey .overlay {
+  height: 740px;
 }
 
 div.effect-honey:hover .overlay {

@@ -60,12 +60,20 @@ $(function () {
             gallery: { enabled: true }
         });
         
-        $('.tm-gallery').slick({
+        $('.tm-gallery-home').slick({
             dots: true,
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true
+        });
+
+        $('.tm-gallery-spawn').slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: false
         });
     }
 
