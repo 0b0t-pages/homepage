@@ -93,12 +93,13 @@ $colors: (
   text: (
     base: #fff,
     grey: rgba(166, 173, 186, 100%),
+    dark: #232323,
   ),
   shadow: (
     overlay: rgba(0, 0, 0, 50%),
   ),
   border: (
-    base: #373d49,
+    base: #545c6d,
   ),
   button: (
     base: rgb(25, 29, 36),
@@ -111,8 +112,8 @@ $colors: (
     active: #00db00,
   ),
   background: (
-    base: #2a303c,
-    dark: #1f242d,
+    base: #414141,
+    dark: #232323,
     discord: #4636ff,
     text: #242933,
   ),

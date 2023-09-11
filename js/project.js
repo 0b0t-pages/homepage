@@ -15,7 +15,6 @@
 		img.onload = function() {
 			var dim = getBox(this.width * scale, this.height * scale);
 			console.log("%c" + dim.string, dim.style + "background: url(" + url + "); background-size: " + (this.width * scale) + "px " + (this.height * scale) + "px; color: transparent;");
-			console.log(dim.string, dim.style + "background: url(" + url + "); background-size: " + (this.width * scale) + "px " + (this.height * scale) + "px; color: transparent;");
 		};
 
 		img.src = url;

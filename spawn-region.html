@@ -54,10 +54,13 @@
             position: relative;
             margin-top: 0;
             text-align: center;
+            padding-bottom: 100%;
         }
         .scene img {
             width: 100%;
             display: none;
+            position: absolute;
+            left: 0;
         }
         .scene img.active {
             display: inline-block;
@@ -79,8 +82,13 @@
         }
 
         @media (min-width: 1200px) {
+            .scene {
+                padding-bottom: 75%;
+            }
             .scene img {
                 width: 75%;
+                transform: translateX(-50%);
+                left: 50%;
             }
         }
     </style>
@@ -92,7 +100,7 @@
     <div class="ctn">
 
         <header class="block header p8">
-            <div class="row nowrap start-xxs between-sm">
+            <div class="row nowrap start-xxs between-md">
                 
                 <button class="navbar-toggler" type="button" data-target="#navbarContent"
                     aria-label="Toggle navigation">
@@ -113,7 +121,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="index.html">Home</a>
                             </li>
-                            <li class="nav-item has-child">
+                            <li class="nav-item has-child active">
                                 <span class="nav-link">
                                     Infos 
                                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg>
@@ -125,7 +133,7 @@
                                     <li class="subnav-item">
                                         <a class="subnav-link" href="commands.html">Commands</a>
                                     </li>
-                                    <li class="subnav-item">
+                                    <li class="subnav-item active">
                                         <a class="subnav-link" href="spawn-region.html">Spawn art</a>
                                     </li>
                                 </ul>

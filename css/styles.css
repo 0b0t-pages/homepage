@@ -2150,7 +2150,7 @@ textarea {
   white-space: nowrap;
 }
 .line-title::after, .line-title::before {
-  background-color: #373d49;
+  background-color: #545c6d;
   content: "";
   flex-grow: 1;
   height: 1px;
@@ -2262,7 +2262,7 @@ a.text_link:hover, a.text_link:focus {
 }
 /* stylelint-disable prettier/prettier */
 body {
-  background-color: #1f242d;
+  background-color: #232323;
   color: #fff;
   color: rgb(166, 173, 186);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -2454,7 +2454,7 @@ body {
   top: 0;
   z-index: 5;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar {
     background-color: transparent;
     border-radius: 0;
@@ -2473,7 +2473,7 @@ body {
   margin-left: 20px;
   padding: 12px 16px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-toggler {
     display: none;
   }
@@ -2490,7 +2490,7 @@ body {
   display: flex;
   flex-flow: column nowrap;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar-nav {
     flex-direction: row;
   }
@@ -2505,6 +2505,7 @@ body {
   display: flex;
   font-weight: bold;
   justify-content: space-between;
+  margin: 0 5px;
   padding: 12px 16px;
   text-decoration: none;
   white-space: nowrap;
@@ -2518,7 +2519,7 @@ body {
   transform: rotate(-90deg);
   width: 12px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .navbar .nav-item .nav-link .icon {
     transform: none;
   }
@@ -2531,6 +2532,16 @@ body {
 }
 .navbar .nav-item:hover .subnav, .navbar .nav-item:focus .subnav {
   display: block;
+}
+.navbar .nav-item.active .nav-link {
+  background-color: #fff;
+  color: #232323;
+}
+.navbar .nav-item.active .nav-link svg {
+  fill: #232323;
+}
+.navbar .nav-item.active .subnav-item.active .subnav-link {
+  background-color: #414141;
 }
 .navbar .subnav {
   background-color: #242933;
@@ -2548,7 +2559,8 @@ body {
   color: #fff;
   display: block;
   font-weight: bold;
-  padding: 12px 16px;
+  margin: 4px 0;
+  padding: 8px 12px;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -2625,7 +2637,7 @@ body {
 }
 
 .block {
-  background-color: #2a303c;
+  background-color: #414141;
   border-radius: 16px;
   height: calc(100% - 20px);
   margin-top: 20px;
@@ -3010,7 +3022,7 @@ body {
   width: 12px;
 }
 .slick-dots li button::before {
-  background-color: #2a303c;
+  background-color: #414141;
   border-radius: 50%;
   content: "";
   height: 12px;
@@ -3038,7 +3050,7 @@ body {
 .slick-prev:hover, .slick-prev:focus,
 .slick-next:hover,
 .slick-next:focus {
-  background-color: rgba(42, 48, 60, 0.45);
+  background-color: rgba(65, 65, 65, 0.45);
 }
 
 .slick-prev {
